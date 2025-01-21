@@ -1,0 +1,237 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-image: url(./Imagens/background-full-claro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.2s ease;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px 30px 100px;
+}
+
+header .github-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.github-btn {
+    width: 65px;
+    height: 65px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    transition: background-image 0.2s ease;
+}
+
+.github-btn {
+    background-image: url("Imagens/logo-github.png"); 
+}
+
+header .logo {
+    width: 250px;
+}
+
+header .logo:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+header .mode-btn {
+    background-color: transparent;
+    border: none;
+}
+
+header .mode-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+body.modo-noturno {
+    background-image: url("./Imagens/background-full-escuro.jpg");
+    color: #ffffff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+}
+
+.barra-pesquisa input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border-color: #041a3500;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    width: 35%;
+    margin: 0px 50px 50px 400px;
+}
+
+li {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+li .hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.lista-personagem {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-evenly;
+
+    list-style: none;
+    padding: 0;
+}
+
+.imagem-personagem {
+    align-content: center;
+    position: relative;
+}
+
+main .personagem {
+    background-image: url(./Imagens/background.jpg);
+    width: 420px;
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 5px #ffffff;
+    color: rgb(66, 66, 66);
+
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+body.modo-noturno main .personagem {
+    background-image: url(./Imagens/background-escuro.jpg);
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+main .personagem .informacoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .personagem .informacoes span {
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+main .descricao {
+    border-radius: 6px;
+    padding: 5px;
+    text-align: justify;
+    max-height: 80px;
+    font-size: 16px;
+    padding-right: 10px;
+    margin: -4px;
+}
+
+@media (max-width: 1280px) {
+    body {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    header {
+        flex-wrap: space-between;
+        padding: 30px 50px 20px 50px;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .github-btn {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .barra-pesquisa input {
+        width: 100%;
+        margin: 0 auto 30px;
+    }
+
+    main .personagem {
+        width: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+        justify-content: space-between;
+    }
+
+    .github-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .barra-pesquisa input {
+        width: 90%;
+        font-size: 14px;
+        margin: 0 auto 20px;
+    }
+
+    main .personagem {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 20px;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .github-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .barra-pesquisa input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    main .personagem {
+        width: 100%;
+        max-width: 250px;
+    }
+}
